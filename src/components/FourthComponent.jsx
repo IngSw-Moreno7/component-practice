@@ -9,7 +9,6 @@ export const FourthComponent = () => {
   const handleDoubleClicked = (e) => {
     alert("Has hecho doble click al botón");
   }
-  // onMouseEnter y onMouseLeave con dos funciones
     const handleMouseEnter = (e) => {
     console.log("Has entrado a mi caja con el Mouse!! ")
   }
@@ -18,22 +17,18 @@ export const FourthComponent = () => {
     console.log("Has salido de mi caja!! ")
   }
 
-  // onMouseEnter y onMouseLeave con una sola función con Alert
   const handleMouse = (e, action) => {
     alert(`Has ${action}  la caja`);
   }
 
-  // onMouseEnter y onMouseLeave con una sola función con  Console Log
   const handleMouseCl = (e, action) => {
     console.log(`Has ${action}  la caja`);
   }
 
-  // onFocus
   const insideInput = (e) => {
     console.log("Estás dentro del input, escribe tu nombre!!");
   }
 
-  // onBlur
   const outsideInput = (e) => {
     console.log("Estás FUERA del input, Adiós!!")
   }
@@ -41,7 +36,6 @@ export const FourthComponent = () => {
   return (
     <div>
         <h2>Eventos en React</h2>
-        {/* Evento Click */}
         <div>
           <button onClick={ () => {
               console.log("Hola, soy un evento Click!!");
@@ -50,13 +44,9 @@ export const FourthComponent = () => {
         <div>
           <button onClick={ handleClicked }>Aquí también haz Click!!</button>
         </div>
-
-        {/* Evento Doble Click */}
         <div>
           <button onDoubleClick={ handleDoubleClicked }>Haz doble click!!</button>
         </div>
-
-        {/* Evento Mouse Enter y Mouse Leave */}
         <hr />
         <div id="box">
           <div id="box1"
@@ -78,7 +68,6 @@ export const FourthComponent = () => {
             <p>Pasa el Mouse por encima!!!</p>
           </div>
         </div>
-        {/* Evento Focus y Blur se usan en el input */}
         <div className='mt-4'>
           <input type="text"
             onFocus={ insideInput }
